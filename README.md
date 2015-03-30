@@ -1,4 +1,4 @@
-# heroku_env
+# heroku-env
 
 > Don't worry about the environment.
 
@@ -23,7 +23,7 @@ The gem uses `||=` in all the assignments, so you can easily override any variab
 Add to your Gemfile:
 
 ```ruby
-gem "heroku_env"
+gem "heroku-env"
 ```
 
 Then run:
@@ -65,7 +65,7 @@ Mail.deliver do
      from "Sender <#{ENV["MAIL_FROM"]}>"
        to "receiver@example.com"
   subject "Test email"
-     body "Just testing heroku_env"
+     body "Just testing heroku-env"
 end
 ```
 

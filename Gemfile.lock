@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    heroku_env (0.0.1)
+    heroku-env (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -12,5 +12,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  heroku_env!
+  heroku-env!
   rake (= 10.4.2)
