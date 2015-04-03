@@ -41,6 +41,13 @@ Supports [Redis Cloud](https://addons.heroku.com/rediscloud) and [Redis To Go](h
 $redis = Redis.new
 ```
 
+### Memcache
+
+Supports [MemCachier](https://addons.heroku.com/memcachier) and [Memcached Cloud](https://addons.heroku.com/memcachedcloud)
+
+```ruby
+$dc = Dalli::Client.new
+```
 
 ### SMTP
 
