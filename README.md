@@ -18,7 +18,7 @@ $redis = Redis.new
 
 Doing this in every project started to become a little annoying, so I decided to make a gem. The goal is to handle all kinds of addons, but for now it only handles Redis and SMTP. Suggest more types by filing an issue.
 
-I only add addons that I can test myself, so this gem will only support addons with a free plan. The order that the addons are selected depends on how stable and easy I perceive them to be. So if you are deciding what provider you want to use, a good choice if probably the first one on the lists of supported addons I list below.
+The gem only supports addons with a free plan. The order that the addons are selected depends on how stable and easy I perceive them to be. So if you are deciding what provider you want to use, a good choice is probably the first one in the lists below.
 
 The gem uses `||=` in all the assignments, so you can easily override any variable by manually setting it.
 
