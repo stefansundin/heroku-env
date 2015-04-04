@@ -1,6 +1,11 @@
-# heroku-env
+# heroku-env [![Gem Version](https://badge.fury.io/rb/heroku-env.svg)](https://rubygems.org/gems/heroku-env) [![RSS](https://stefansundin.github.io/img/feed.png)](https://rubygems.org/gems/heroku-env/versions.atom)
 
 > Don't worry about the environment.
+
+- [Installation](#installation)
+- [Redis](#redis)
+- [Memcache](#memcache)
+- [SMTP](#smtp)
 
 This simple gem makes it easier for you to use different Heroku addons in a plug-and-play fashion. Normally, if you decide to add a Redis provider, you have to customize your code to use that addon's environment variables. The problem with this, however, is that if you want to switch provider, you have to update your code.
 
@@ -18,7 +23,7 @@ I only add addons that I can test myself, so this gem will only support addons w
 The gem uses `||=` in all the assignments, so you can easily override any variable by manually setting it.
 
 
-## Installing
+## Installation
 
 Add to your Gemfile:
 
@@ -26,7 +31,7 @@ Add to your Gemfile:
 gem "heroku-env"
 ```
 
-Then run:
+Then run this once your ENV is loaded (e.g. after `dotenv`):
 
 ```ruby
 HerokuEnv.run
@@ -43,7 +48,7 @@ $redis = Redis.new
 
 ### Memcache
 
-Supports [MemCachier](https://addons.heroku.com/memcachier) and [Memcached Cloud](https://addons.heroku.com/memcachedcloud)
+Supports [MemCachier](https://addons.heroku.com/memcachier) and [Memcached Cloud](https://addons.heroku.com/memcachedcloud).
 
 ```ruby
 $dc = Dalli::Client.new
@@ -77,6 +82,20 @@ end
 ```
 
 If you use Postmark, you have to manually set `MAIL_FROM`.
+
+#### ActionMailer
+
+If you use Rails, you might want to use this:
+
+```ruby
+ActionMailer::Base.smtp_settings = {
+  address:        ENV["SMTP_HOST"],
+  port:           ENV["SMTP_PORT"],
+  user_name:      ENV["SMTP_USERNAME"],
+  password:       ENV["SMTP_PASSWORD"],
+  authentication: :plain,
+}
+```
 
 
 ## Misc notes
