@@ -1,4 +1,4 @@
-# heroku-env [![Gem Version](https://badge.fury.io/rb/heroku-env.svg)](https://rubygems.org/gems/heroku-env) [![RSS](https://stefansundin.github.io/img/feed.png)](https://rubygems.org/gems/heroku-env/versions.atom)
+# heroku-env [![Gem Version](https://badge.fury.io/rb/heroku-env.svg)](https://rubygems.org/gems/heroku-env) [![RSS](https://stefansundin.github.io/img/feed.png)](https://github.com/stefansundin/heroku-env/releases.atom)
 
 > Don't worry about the environment.
 

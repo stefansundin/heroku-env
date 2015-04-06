@@ -8,13 +8,13 @@ Gem::Specification.new do |s|
   s.email       = ["stefan@stefansundin.com"]
   s.homepage    = "https://github.com/stefansundin/heroku-env"
   s.summary     = "Don't worry about the environment."
-  s.description = "This gem automatically promotes Heroku addons' environment settings."
+  s.description = "This gem automatically promotes Heroku addons' environment settings. See the GitHub page for usage."
 
   s.required_rubygems_version = ">= 1.3.6"
 
   s.add_development_dependency "rake", "10.4.2"
 
-  s.files        = `git ls-files`.split("\n")
+  s.files        = `git ls-files`.split("\n") - %w(.gitignore README.md Rakefile)
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
 end
