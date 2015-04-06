@@ -33,7 +33,7 @@ The gem uses `||=` in all the assignments, so you can easily override any variab
 Add to your Gemfile:
 
 ```ruby
-gem "heroku-env"
+gem "heroku-env", "~> 0.0.3"
 ```
 
 Then run this once your ENV is loaded (e.g. after `dotenv`):
