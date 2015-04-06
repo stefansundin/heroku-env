@@ -5,7 +5,12 @@
 - [Installation](#installation)
 - [Redis](#redis)
 - [Memcache](#memcache)
+- [Mongo](#mongo)
+- [MySQL](#mysql)
+- [Neo4j](#neo4j)
+- [Elasticsearch](#elasticsearch)
 - [SMTP](#smtp)
+- [Airbrake](#airbrake)
 
 This simple gem makes it easier for you to use different Heroku addons in a plug-and-play fashion. Normally, if you decide to add a Redis provider, you have to customize your code to use that addon's environment variables. The problem with this, however, is that if you want to switch provider, you have to update your code.
 
@@ -54,6 +59,46 @@ Supports [MemCachier](https://addons.heroku.com/memcachier) and [Memcached Cloud
 $dc = Dalli::Client.new
 ```
 
+### Mongo
+
+Supports [MongoLab](https://addons.heroku.com/mongolab) and [MongoSoup](https://addons.heroku.com/mongosoup).
+
+```ruby
+$mongo = Mongo::Client.new ENV["MONGO_URL"]
+```
+
+### MySQL
+
+Supports [ClearDB](https://addons.heroku.com/cleardb).
+
+```ruby
+config = URI.parse ENV["MYSQL_URL"]
+$mysql = Mysql2::Client.new(
+  host:     config.hostname,
+  port:     config.port,
+  username: config.user,
+  password: config.password,
+  database: config.path.sub(%r{^/},""),
+  reconnect: true
+)
+```
+
+### Neo4j
+
+Supports [Graph Story](https://addons.heroku.com/graphstory) and [GrapheneDB](https://addons.heroku.com/graphenedb).
+
+```ruby
+$neo4j = Neo4j::Session.open :server_db, ENV["NEO4J_URL"]
+```
+
+### Elasticsearch
+
+Supports [Bonsai](https://addons.heroku.com/bonsai) and [SearchBox](https://addons.heroku.com/searchbox).
+
+```ruby
+$elasticsearch = Elasticsearch::Client.new
+```
+
 ### SMTP
 
 Supports [Mandrill](https://addons.heroku.com/mandrill), [SendGrid](https://addons.heroku.com/sendgrid), [Mailgun](https://addons.heroku.com/mailgun) and [Postmark](https://addons.heroku.com/postmark).
@@ -96,6 +141,20 @@ ActionMailer::Base.smtp_settings = {
   authentication: :plain,
 }
 ```
+
+### Airbrake
+
+Supports [Raygun](https://addons.heroku.com/raygun) and [Rollbar](https://addons.heroku.com/rollbar).
+
+```ruby
+Airbrake.configure do |config|
+  config.host = ENV["AIRBRAKE_HOST"]
+  config.api_key = ENV["AIRBRAKE_KEY"]
+  config.secure = true
+end
+```
+
+Another Airbrake-compatible provider is [AppEnlight](https://appenlight.com/), it is free but they don't provide a Heroku addon. You can manually set `APPENLIGHT_APIKEY` to use it.
 
 
 ## Misc notes
