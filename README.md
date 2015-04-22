@@ -160,3 +160,4 @@ Another Airbrake-compatible provider is [AppEnlight](https://appenlight.com/), i
 ## Misc notes
 
 - Postmark sends you some unwanted emails if you add the addon.
+- I might change the initialization in a later version (e.g. add Railtie), so please use the version specification in your Gemfile.
