@@ -33,12 +33,17 @@ The gem uses `||=` in all the assignments, so you can easily override any variab
 Add to your Gemfile:
 
 ```ruby
-gem "heroku-env", "~> 0.0.3"
+gem "heroku-env", "~> 0.1.0"
 ```
 
-Then run this once your ENV is loaded (e.g. after `dotenv`):
+If you use `dotenv-rails`, then you should put this gem lower than it in the Gemfile.
+
+If you use Rails, then you should not need to do anything more, the gem has a Railtie hook which will do the initialization.
+
+If not, then you might have to run this manually:
 
 ```ruby
+require "heroku-env"
 HerokuEnv.run
 ```
 
@@ -160,4 +165,3 @@ Another Airbrake-compatible provider is [AppEnlight](https://appenlight.com/), i
 ## Misc notes
 
 - Postmark sends you some unwanted emails if you add the addon.
-- I might change the initialization in a later version (e.g. add Railtie), so please use the version specification in your Gemfile.

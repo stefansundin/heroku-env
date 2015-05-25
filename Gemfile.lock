@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    heroku-env (0.0.3)
+    heroku-env (0.1.0)
 
 GEM
   remote: https://rubygems.org/
