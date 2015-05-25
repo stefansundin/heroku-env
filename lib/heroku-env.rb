@@ -42,3 +42,7 @@ module HerokuEnv
     ENV["AIRBRAKE_KEY"] ||= ENV["RAYGUN_APIKEY"] || ENV["ROLLBAR_ACCESS_TOKEN"] || ENV["APPENLIGHT_APIKEY"]
   end
 end
+
+require "heroku-env/railtie" if defined?(Rails)
+
+HerokuEnv.run
