@@ -106,7 +106,7 @@ $elasticsearch = Elasticsearch::Client.new
 
 ### SMTP
 
-Supports [Mandrill](https://addons.heroku.com/mandrill), [SendGrid](https://addons.heroku.com/sendgrid), [Mailgun](https://addons.heroku.com/mailgun) and [Postmark](https://addons.heroku.com/postmark).
+Supports [Mandrill](https://addons.heroku.com/mandrill), [SendGrid](https://addons.heroku.com/sendgrid), [Mailgun](https://addons.heroku.com/mailgun), [Postmark](https://addons.heroku.com/postmark) and [SparkPost](https://addons.heroku.com/sparkpost).
 
 ```ruby
 Mail.defaults do
