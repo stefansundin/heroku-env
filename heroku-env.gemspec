@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake", "10.4.2"
 
-  s.files        = `git ls-files`.split("\n").select { |path| path.start_with?("lib/") }
+  s.files        = `git ls-files lib`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
 end
