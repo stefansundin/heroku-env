@@ -47,6 +47,13 @@ require "heroku-env"
 HerokuEnv.run
 ```
 
+This gem is cryptographically signed, you can verify the installation with:
+
+```bash
+gem cert --add <(curl -Ls https://raw.githubusercontent.com/stefansundin/heroku-env/master/certs/stefansundin.pem)
+gem install heroku-env -P HighSecurity
+```
+
 
 ### Redis
 
