@@ -57,7 +57,7 @@ gem install heroku-env -P HighSecurity
 
 ### Redis
 
-Supports [Redis Cloud](https://addons.heroku.com/rediscloud) and [Redis To Go](https://addons.heroku.com/redistogo).
+Supports [Redis Cloud](https://elements.heroku.com/addons/rediscloud) and [Redis To Go](https://elements.heroku.com/addons/redistogo).
 
 ```ruby
 $redis = Redis.new
@@ -65,7 +65,7 @@ $redis = Redis.new
 
 ### Memcache
 
-Supports [MemCachier](https://addons.heroku.com/memcachier) and [Memcached Cloud](https://addons.heroku.com/memcachedcloud).
+Supports [MemCachier](https://elements.heroku.com/addons/memcachier) and [Memcached Cloud](https://elements.heroku.com/addons/memcachedcloud).
 
 ```ruby
 $dc = Dalli::Client.new
@@ -73,7 +73,7 @@ $dc = Dalli::Client.new
 
 ### Mongo
 
-Supports [MongoLab](https://addons.heroku.com/mongolab) and [MongoSoup](https://addons.heroku.com/mongosoup).
+Supports [MongoLab](https://elements.heroku.com/addons/mongolab) and [MongoSoup](https://elements.heroku.com/addons/mongosoup).
 
 ```ruby
 $mongo = Mongo::Client.new ENV["MONGO_URL"]
@@ -81,7 +81,7 @@ $mongo = Mongo::Client.new ENV["MONGO_URL"]
 
 ### MySQL
 
-Supports [ClearDB](https://addons.heroku.com/cleardb).
+Supports [ClearDB](https://elements.heroku.com/addons/cleardb).
 
 ```ruby
 config = URI.parse ENV["MYSQL_URL"]
@@ -97,7 +97,7 @@ $mysql = Mysql2::Client.new(
 
 ### Neo4j
 
-Supports [Graph Story](https://addons.heroku.com/graphstory) and [GrapheneDB](https://addons.heroku.com/graphenedb).
+Supports [Graph Story](https://elements.heroku.com/addons/graphstory) and [GrapheneDB](https://elements.heroku.com/addons/graphenedb).
 
 ```ruby
 $neo4j = Neo4j::Session.open :server_db, ENV["NEO4J_URL"]
@@ -105,7 +105,7 @@ $neo4j = Neo4j::Session.open :server_db, ENV["NEO4J_URL"]
 
 ### Elasticsearch
 
-Supports [Bonsai](https://addons.heroku.com/bonsai) and [SearchBox](https://addons.heroku.com/searchbox).
+Supports [Bonsai](https://elements.heroku.com/addons/bonsai) and [SearchBox](https://elements.heroku.com/addons/searchbox).
 
 ```ruby
 $elasticsearch = Elasticsearch::Client.new
@@ -113,7 +113,7 @@ $elasticsearch = Elasticsearch::Client.new
 
 ### SMTP
 
-Supports [Mandrill](https://addons.heroku.com/mandrill), [SendGrid](https://addons.heroku.com/sendgrid), [Mailgun](https://addons.heroku.com/mailgun), [Postmark](https://addons.heroku.com/postmark) and [SparkPost](https://addons.heroku.com/sparkpost).
+Supports [Mandrill](https://elements.heroku.com/addons/mandrill), [SendGrid](https://elements.heroku.com/addons/sendgrid), [Mailgun](https://elements.heroku.com/addons/mailgun), [Postmark](https://elements.heroku.com/addons/postmark) and [SparkPost](https://elements.heroku.com/addons/sparkpost).
 
 ```ruby
 Mail.defaults do
@@ -156,7 +156,7 @@ ActionMailer::Base.smtp_settings = {
 
 ### Airbrake
 
-Supports [Raygun](https://addons.heroku.com/raygun) and [Rollbar](https://addons.heroku.com/rollbar).
+Supports [Raygun](https://elements.heroku.com/addons/raygun) and [Rollbar](https://elements.heroku.com/addons/rollbar).
 
 ```ruby
 Airbrake.configure do |config|
