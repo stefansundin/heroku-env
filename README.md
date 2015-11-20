@@ -156,7 +156,7 @@ ActionMailer::Base.smtp_settings = {
 
 ### Airbrake
 
-Supports [Raygun](https://elements.heroku.com/addons/raygun) and [Rollbar](https://elements.heroku.com/addons/rollbar).
+Supports [Airbrake](https://elements.heroku.com/addons/airbrake), [Raygun](https://elements.heroku.com/addons/raygun) and [Rollbar](https://elements.heroku.com/addons/rollbar).
 
 ```ruby
 Airbrake.configure do |config|
