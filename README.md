@@ -81,7 +81,7 @@ $mongo = Mongo::Client.new ENV["MONGO_URL"]
 
 ### MySQL
 
-Supports [ClearDB](https://elements.heroku.com/addons/cleardb).
+Supports [ClearDB](https://elements.heroku.com/addons/cleardb) and [JawsDB](https://elements.heroku.com/addons/jawsdb-maria).
 
 ```ruby
 config = URI.parse ENV["MYSQL_URL"]
