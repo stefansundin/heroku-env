@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = ">= 1.3.6"
 
-  s.add_development_dependency "rake", "10.4.2"
+  s.add_development_dependency "rake"
 
   s.files        = `git ls-files lib`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
