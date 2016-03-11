@@ -57,6 +57,8 @@ gem install heroku-env -P HighSecurity
 
 ### Redis
 
+Nowadays Heroku is offering their own redis solution called [Heroku Redis](https://elements.heroku.com/addons/heroku-redis) which I recommend unless you have specific requirements. It populates `REDIS_URL` so this gem is not required.
+
 Supports [Redis Cloud](https://elements.heroku.com/addons/rediscloud) and [Redis To Go](https://elements.heroku.com/addons/redistogo).
 
 ```ruby
